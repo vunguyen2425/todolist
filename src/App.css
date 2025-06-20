@@ -1,0 +1,270 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.todo-app {
+  background: var(--bg, #fff);
+  color: var(--fg, #111);
+  max-width: 420px;
+  margin: 40px auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #0002;
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --bg: #fff;
+  --fg: #111;
+  --input-bg: #f6f6f6;
+  --input-fg: #111;
+  --border: #e0e0e0;
+  --accent: #111;
+  --accent-hover: #222;
+  --completed: #bbb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #181818;
+    --fg: #f6f6f6;
+    --input-bg: #232323;
+    --input-fg: #f6f6f6;
+    --border: #333;
+    --accent: #fff;
+    --accent-hover: #eee;
+    --completed: #555;
+  }
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.todo-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+.todo-input {
+  flex: 1;
+  padding: 0.7em 1em;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--input-fg);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.todo-input:focus {
+  border: 1.5px solid var(--accent);
+}
+.add-btn {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  padding: 0 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.add-btn:hover {
+  background: var(--accent-hover);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  gap: 1rem;
+}
+.search-input {
+  flex: 1;
+  padding: 0.5em 1em;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--input-fg);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.search-input:focus {
+  border: 1.5px solid var(--accent);
+}
+.filters {
+  display: flex;
+  gap: 0.3rem;
+}
+.filters button {
+  background: none;
+  border: 1.5px solid var(--border);
+  color: var(--fg);
+  border-radius: 6px;
+  padding: 0.3em 0.9em;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: border 0.2s, background 0.2s, color 0.2s;
+}
+.filters button.active,
+.filters button:hover {
+  border: 1.5px solid var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.2rem 0;
+}
+.todo-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7em 0.5em;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.08rem;
+  transition: background 0.2s;
+}
+.todo-list li:last-child {
+  border-bottom: none;
+}
+.todo-list li.completed .todo-text {
+  text-decoration: line-through;
+  color: var(--completed);
+}
+.todo-list li .todo-text {
+  flex: 1;
+  text-align: left;
+  cursor: pointer;
+  user-select: text;
+  transition: color 0.2s;
+}
+.todo-list li .edit-input {
+  flex: 1;
+  padding: 0.5em 0.7em;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--input-bg);
+  color: var(--input-fg);
+}
+.save-btn {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 6px;
+  padding: 0.2em 0.8em;
+  font-size: 0.98rem;
+  margin-left: 0.3em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.save-btn:hover {
+  background: var(--accent-hover);
+}
+.delete-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: 0.2em;
+  transition: color 0.2s;
+}
+.delete-btn:hover {
+  color: #c0392b;
+}
+.empty {
+  text-align: center;
+  color: var(--completed);
+  padding: 1.5em 0 0.5em 0;
+  font-style: italic;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--completed);
+  margin-top: 1.5rem;
+}
+.clear-btn {
+  background: none;
+  border: 1.5px solid var(--border);
+  color: var(--completed);
+  border-radius: 6px;
+  padding: 0.2em 0.8em;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: border 0.2s, color 0.2s;
+}
+.clear-btn:hover {
+  border: 1.5px solid #e74c3c;
+  color: #e74c3c;
+}
+
+.nav {
+  display: flex;
+  gap: 1.2em;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+.nav a {
+  color: var(--fg, #111);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.3em 1em;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav a.active, .nav a:focus, .nav a:hover {
+  background: var(--accent, #111);
+  color: var(--bg, #fff);
+}
